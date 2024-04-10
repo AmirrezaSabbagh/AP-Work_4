@@ -14,4 +14,12 @@ public class VotingSystem {
     public ArrayList<Voting> getVotingList() {
         return votingList;
     }
+
+    public void createVoting(String question, boolean isAnonymous, int type, ArrayList<String> choices) {
+        Voting voting = new Voting(type, question, isAnonymous);
+        for (String a : choices) {
+            voting.createChoice(a);
+        }
+        votingList.add(voting);
+    }
 }
