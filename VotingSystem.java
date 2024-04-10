@@ -26,4 +26,8 @@ public class VotingSystem {
     public void vote(int index, Person voter, ArrayList<String> choices) {
         votingList.get(index).vote(voter , choices);
     }
+
+    public void vote(int index, Person voter) {
+        votingList.get(index).vote(voter);
+    }
 }
